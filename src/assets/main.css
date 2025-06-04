@@ -4,3 +4,15 @@
   --color-primary: #393e46;
   --color-secondary: #222831;
 }
+
+@layer base {
+  html {
+    ::-webkit-scrollbar {
+      @apply w-2 bg-primary;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      @apply bg-white;
+    }
+  }
+}
