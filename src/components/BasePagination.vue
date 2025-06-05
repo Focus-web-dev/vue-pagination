@@ -11,7 +11,7 @@
             ? 'text-secondary hover:bg-primary/30'
             : 'text-gray-400 cursor-not-allowed'
         "
-        class="p-2 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50"
+        class="p-2 rounded-full cursor-pointer transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50"
         aria-label="Previous page"
       >
         <svg
@@ -37,7 +37,7 @@
           :class="
             page === currentPage ? 'bg-primary text-white' : 'text-secondary hover:bg-primary/30'
           "
-          class="w-8 h-8 flex items-center justify-center rounded-full font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50"
+          class="w-8 h-8 flex items-center cursor-pointer justify-center rounded-full font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50"
           :aria-current="page === currentPage ? 'page' : undefined"
         >
           {{ page.toString() }}
@@ -55,8 +55,8 @@
       <button
         @click="onSwitchPage(currentPage + 1)"
         :disabled="!showNextButton"
-        :class="{ 'text-gray-400 cursor-not-allowed': showNextButton }"
-        class="p-2 rounded-full text-secondary hover:bg-primary/30 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50"
+        :class="{ 'text-gray-400 cursor-not-allowed': !showNextButton }"
+        class="p-2 rounded-full cursor-pointer text-secondary hover:bg-primary/30 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50"
         aria-label="Next page"
       >
         <svg
