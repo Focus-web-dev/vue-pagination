@@ -8,10 +8,10 @@
         :disabled="!showPreviousButton"
         :class="
           showPreviousButton
-            ? 'text-secondary hover:bg-primary/30'
+            ? 'text-secondary cursor-pointer hover:bg-primary/30'
             : 'text-gray-400 cursor-not-allowed'
         "
-        class="p-2 rounded-full cursor-pointer transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50"
+        class="p-2 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50"
         aria-label="Previous page"
       >
         <svg
@@ -55,8 +55,12 @@
       <button
         @click="onSwitchPage(currentPage + 1)"
         :disabled="!showNextButton"
-        :class="{ 'text-gray-400 cursor-not-allowed': !showNextButton }"
-        class="p-2 rounded-full cursor-pointer text-secondary hover:bg-primary/30 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50"
+        :class="
+          showNextButton
+            ? 'text-secondary cursor-pointer hover:bg-primary/30'
+            : 'text-gray-400 cursor-not-allowed'
+        "
+        class="p-2 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50"
         aria-label="Next page"
       >
         <svg
